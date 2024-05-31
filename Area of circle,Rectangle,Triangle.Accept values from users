@@ -1,0 +1,53 @@
+//Create a class that calculate Area of circle,Rectangle,Triangle.Accept values from users...
+import java.util.*;
+class Area
+{
+	void Circle(double r)
+	{
+	  double a=3.14*r*r;
+	  System.out.println("Area of Circle="+a);
+	}
+	void Rectangle(double l,double b)
+	{
+	  double a=l*b;
+	  System.out.println("Area of Rectangle="+a);
+	}
+	void Triangle(double b,double h)
+	{
+	  double a=0.5*b*h;
+	  System.out.println("Area of Triangle="+a);
+	}
+	public static void main(String arg[])
+    	{
+    	  Area ob;
+    	  ob=new Area();
+    	  Scanner sc=new Scanner(System.in);
+    	  System.out.println("Enter Radius:");
+    	  double r=sc.nextDouble();
+    	  ob.Circle(r);
+    	  System.out.println("Enter Base:");
+    	  double b=sc.nextDouble();
+    	  System.out.println("Enter Height:");
+    	  double h=sc.nextDouble();
+    	  ob.Triangle(b,h);
+    	  System.out.println("Enter Lenght:");
+    	  double l=sc.nextDouble();
+    	  System.out.println("Enter Breadth:");
+    	  b=sc.nextDouble();
+    	  ob.Rectangle(l,b);
+    	}
+}
+	OUTPUT:-
+Enter Radius:
+2.5
+Area of Circle=19.625
+Enter Base:
+5
+Enter Height:
+10
+Area of Triangle=25.0
+Enter Lenght:
+4
+Enter Breadth:
+7
+Area of Rectangle=28.0
