@@ -1,0 +1,30 @@
+//Create a class Emp and display info......
+import java.util.*;
+class Emp
+{
+	int eno;
+	String ename;
+	float sal;
+	Emp(int eno,String ename,float sal)
+	{
+	  this.eno=eno;
+	  this.ename=ename;
+	  this.sal=sal;
+	}
+	void disp()
+	{
+	  System.out.println("Emp Number="+eno);
+	  System.out.println("Emp Name="+ename);
+	  System.out.println("Emp Salary="+sal);
+	}
+	public static void main(String arg[])
+	{
+  	  Emp ob=new Emp(111,"Aman",40000);
+  	  ob.disp();
+  	}
+}
+/*
+Emp Number=111
+Emp Name=Aman
+Emp Salary=40000.0
+*/
