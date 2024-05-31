@@ -1,0 +1,36 @@
+//Create a class Demo that perform :-Evenodd,Leapyear, and Square of number using different fuction..
+class Demo
+{
+	void evenodd(int n)
+	{
+	  if(n%2==0)
+	    System.out.println("Number is Even...");
+	  else
+    	    System.out.println("Number is Odd...");
+    	}
+    	void leapyear(int y)
+    	{
+    	  if(y%4==0)
+	    System.out.println("Year is Leap Year...");
+	  else
+    	    System.out.println("Year is not Leap Year...");
+    	}
+    	void square(int n)
+    	{
+    	  int s=n*n;
+    	  System.out.println("Square="+s);
+    	}
+    	public static void main(String ard[])
+    	{
+    	  Demo ob;
+    	  ob=new Demo();
+    	  ob.evenodd(19);
+    	  ob.leapyear(2025);
+    	  ob.square(4);
+    	}
+}
+
+OUTPUT:-
+Number is Odd...
+Year is not Leap Year...
+Square=16
