@@ -1,0 +1,44 @@
+//Create a class Emp.Accept Info from user and display......
+import java.util.*;
+class Emp
+{
+	int eno;
+	String ename;
+	float sal;
+	Emp(int eno,String ename,float sal)
+	{
+	  this.eno=eno;
+	  this.ename=ename;
+	  this.sal=sal;
+	}
+	void disp()
+	{
+	  System.out.println("Emp Number="+eno);
+	  System.out.println("Emp Name="+ename);
+	  System.out.println("Emp Salary="+sal);
+	}
+	public static void main(String arg[])
+	{
+	  Scanner sc=new Scanner(System.in);
+	  System.out.println("Enter Emp No:");
+	  int eno=sc.nextInt();
+  	  System.out.println("Enter Emp Name:");
+  	  String ename=sc.next();
+  	  System.out.println("Enter Emp Sal:");
+  	  float s=sc.nextFloat();
+  	  Emp ob=new Emp(eno,ename,s);
+  	  ob.disp();
+  	}
+}
+
+/* OUTPUT:-
+Enter Emp No:
+111
+Enter Emp Name:
+Karan
+Enter Emp Sal:
+55000
+Emp Number=111
+Emp Name=Karan
+Emp Salary=55000.0
+*/
