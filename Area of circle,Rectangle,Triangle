@@ -1,0 +1,32 @@
+//Create a class that calculate Area of circle,Rectangle,Triangle...
+class Area
+{
+	void Circle(float r)
+	{
+	  float a=3.14f*r*r;
+	  System.out.println("Area of Circle="+a);
+	}
+	void Rectangle(float l,float b)
+	{
+	  float a=l*b;
+	  System.out.println("Area of Rectangle="+a);
+	}
+	void Triangle(float b,float h)
+	{
+	  float a=0.5f*b*h;
+	  System.out.println("Area of Triangle="+a);
+	}
+	public static void main(String arg[])
+    	{
+    	  Area ob;
+    	  ob=new Area();
+    	  ob.Circle(5.3f);
+    	  ob.Rectangle(4.6f,2.4f);
+    	  ob.Triangle(4.5f,6.8f);
+    	}
+}
+
+OUTPUT:-
+Area of Circle=88.202614
+Area of Rectangle=11.04
+Area of Triangle=15.3
