@@ -1,0 +1,31 @@
+//Accept Student (rno,sname,per)and display..
+class Student
+{
+	int rno;
+	String sname;
+	float per;
+	void accept(int rno1,String sname1,float pp)
+	{
+	  rno=rno1;
+	  sname=sname1;
+	  per=pp;
+	}
+	void disp()
+	{
+	  System.out.println("Roll No="+rno);
+	  System.out.println("Name="+sname);
+	  System.out.println("Percentage="+per);
+	}
+	public static void main(String arg[])
+	{
+	  Student ob=new Student();
+	  ob.accept(10,"Ram",90);
+	  ob.disp();
+	}
+}
+/*
+OUTPUT:-
+Roll No=10
+Name=Ram
+Percentage=90.0
+*/
