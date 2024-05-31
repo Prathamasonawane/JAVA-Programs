@@ -1,0 +1,45 @@
+//Accept Student(rno,sname,per)info from users and display..
+import java.util.*;
+class Student
+{
+	int rno;
+	String sname;
+	float per;
+	void accept(int rno1,String sname1,float pp)
+	{
+	  rno=rno1;
+	  sname=sname1;
+	  per=pp;
+	}
+	void disp()
+	{
+	  System.out.println("Roll No="+rno);
+	  System.out.println("Name="+sname);
+	  System.out.println("Percentage="+per);
+	}
+	public static void main(String arg[])
+	{
+	  Student ob=new Student();
+	  Scanner sc=new Scanner(System.in);
+	  System.out.println("Enter Roll No:");
+	  int rno=sc.nextInt();
+	  System.out.println("Enter Name:");
+	  String n=sc.next();
+	  System.out.println("Enter Percentage:");
+	  float p=sc.nextFloat();
+	  ob.accept(rno,n,p);
+	  ob.disp();
+	}
+}
+/*
+OUTPUT:-
+Enter Roll No:
+101
+Enter Name:
+Ram
+Enter Percentage:
+89
+Roll No=101
+Name=Ram
+Percentage=89.0
+*/
