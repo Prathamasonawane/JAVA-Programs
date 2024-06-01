@@ -1,0 +1,35 @@
+//Accept 'N' Numbers and display...
+import java.util.*;
+class Emp
+{
+	public static void main(String arg[])
+	{
+	int a[]=new int[100];
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter Limit:");
+	int n=sc.nextInt();
+	System.out.println("Enter N Numbers:");	
+	for(int i=0;i<n;i++)
+	{
+	  a[i]=sc.nextInt();
+	}
+	System.out.println("Display Numbers:");	
+	for(int i=0;i<n;i++)
+	{
+	  System.out.printf("%d\t",a[i]);
+	}	
+	}
+}
+/*
+Output:-
+Enter Limit:
+5
+Enter N Numbers:
+10
+20
+30
+40
+50
+Display Numbers:
+10	20	30	40	50
+*/
