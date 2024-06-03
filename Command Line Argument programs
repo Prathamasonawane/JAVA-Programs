@@ -1,0 +1,74 @@
+/* Write a java Program to Accept Emp info(eno,ename,sal) using Command Line Argument..*/
+class Emp
+{
+	public static void main(String arg[])
+	{
+	  int eno=Integer.parseInt(arg[0]);
+	  String ename=arg[1];
+	  float sal=Float.parseFloat(arg[2]);
+	  
+	  System.out.println("Employee No:"+eno);
+	  System.out.println("Employee Name:"+ename);	  
+	  System.out.println("Employee Sal:"+sal);	  
+	}
+}
+/*
+Output:-
+java Emp 101 om 40000
+Employee No:101
+Employee Name:om
+Employee Sal:40000.0
+*/	  
+
+-------------------------------------------------------------------------------------
+/* Write a java program to accept Two Numbers using Command Line Argument And Calculate Addition,Substraction,Division,Multiplication..*/
+class Number
+{
+	public static void main(String arg[])
+	{
+	  int a=Integer.parseInt(arg[0]);
+	  int b=Integer.parseInt(arg[1]);
+	  int c=a+b;
+	  int d=a-b;
+	    int e=a*b;
+	    int f=a/b;
+	    
+	  System.out.println("Addition="+c);
+	  System.out.println("Substraction="+d);
+	  System.out.println("Division="+f);
+	  System.out.println("Multiplication="+e);
+	}
+}
+/*
+Output:-
+java Number 66 44
+Addition=110
+Substraction=22
+Division=1
+Multiplication=2904
+*/
+
+-----------------------------------------------------------------------------------
+/* Write a java program to display all the Even Numbers from an array (Use Command Line Argument)..*/
+class EvenOdd
+{	public static void main(String p[])
+	{
+	  System.out.println("Even Numbers:-");
+	    for(int i=0;i<p.length;i++)
+	     {
+	       int n=Integer.parseInt(p[i]);
+	         if(n%2==0)
+	          System.out.println(n+" ");
+	     }
+	 }
+}
+/*Output:-
+java EvenOdd 23 90 45 33 44 11 46 78 90 65
+Even Numbers:-
+90 
+44 
+46 
+78 
+90 
+*/
+
