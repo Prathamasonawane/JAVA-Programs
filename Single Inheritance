@@ -1,0 +1,146 @@
+/* Example of Single Inheritance
+Collage=cno,cname,caddress-->acceptc()
+Student=rno,sname,per-->accepts() and disp()*/
+
+import java.util.*;
+class Collage
+{
+	int cno;
+	String cname,caddress;
+	Scanner sc=new Scanner(System.in);
+	void acceptc()
+	{
+	  System.out.println("Enter Collage No:");
+	  cno=sc.nextInt();
+	  System.out.println("Enter Collage Name:");
+	  cname=sc.next();
+	  System.out.println("Enter Collage Address:");
+	  caddress=sc.next();
+	 }
+}
+class Student extends Collage
+{
+	int rno;
+	String sname;
+	float per;
+	void accepts()
+	{
+	  System.out.println("Enter Student RollNo:");
+	  rno=sc.nextInt();
+	  System.out.println("Enter Student Name:");
+	  sname=sc.next();
+	  System.out.println("Enter Student Percentage:");
+	  per=sc.nextFloat();
+	 }
+	 void disp()
+	 {
+	   System.out.println("Collage No="+cno);
+	   System.out.println("Collage Name="+cname);
+	   System.out.println("Collage Address="+caddress);
+	   System.out.println("Student RollNo="+rno);
+	   System.out.println("Student Name="+sname);
+	   System.out.println("Student Percentage="+per);
+	 }
+	 public static void main(String s[])
+	 {
+	   Student ob=new Student();
+	   ob.acceptc();
+	   ob.accepts();
+	   ob.disp();
+	 }
+}
+/*
+Output:-
+java Student
+Enter Collage No:
+11
+Enter Collage Name:
+RBNB
+Enter Collage Address:
+Shrirampur
+Enter Student RollNo:
+101
+Enter Student Name:
+Karan
+Enter Student Percentage:
+89.89
+Collage No=11
+Collage Name=RBNB
+Collage Address=Shrirampur
+Student RollNo=101
+Student Name=Karan
+Student Percentage=89.89
+*/	  
+	------------------------------------------------------------------------------------------------------------------------------
+/* Example of Single Inheritance
+MyNumber=accept()
+Operation=prime,perfect,factorial*/
+
+import java.util.*;
+class MyNumber
+{
+	int n;
+	Scanner sc=new Scanner(System.in);
+	void accept()
+	{
+	  System.out.println("Enter Number:");
+	  n=sc.nextInt();
+	}
+}
+class Operation extends MyNumber
+{
+	void Prime()
+	{
+	  int i;
+	  for(i=2;i<n;i++)
+	   {
+	   if(n%i==0)
+	   break;
+	   }
+	   if(i==n)
+	     System.out.println("Number Is Prime");
+	   else
+	     System.out.println("Number Is Not Prime");
+	 }
+	 void Factorial()
+	 {
+	   int F=1,i;
+	   for(i=1;i<=n;i++)
+	    {
+	      F=F*i;
+	    }
+	    System.out.println("Factorial="+F);
+	  }
+	  void Perfect()
+	  {
+	    int i,s=0;
+	    for(i=1;i<n;i++)
+	     {
+	       if(n%i==0)
+	         s=s+i;
+	     }
+	     if(s==n)
+	       System.out.println("Number Is Perfect");
+	     else
+	       System.out.println("Number Is Not Perfect");
+	   }
+	 public static void main(String s[])
+	 {
+	   Operation ob=new Operation();
+	   ob.accept();
+	   ob.Prime();
+	   ob.Factorial();
+	   ob.Perfect();
+	   
+	 }
+}
+/*
+Output:-
+java Operation
+Enter Number:
+4
+Number Is Not Prime
+Factorial=24
+Number Is Not Perfect
+*/
+-------------------------------------------------------------------------------------------------------------------
