@@ -1,0 +1,126 @@
+/* Define an Interface Shape with Abstract Method Area().Write a java Program to Calculate an Area() of Circle and Sphere.(Use Final Keyword)..*/
+interface Shape
+{
+	final float PI=3.14f;
+	void area_circle(float r);
+	void area_sphere(float r);
+}
+class Area implements Shape
+{
+	public void area_circle(float r)
+	{
+	  float a=PI*r*r;
+	  System.out.println("Area of Circle="+a);
+        }
+        public void area_sphere(float r)
+	{
+	  float a=4*PI*r*r;
+	  System.out.println("Area of Sphere="+a);
+        }	
+        public static void main(String arg[])
+        {
+          Area ob=new Area();
+          ob.area_circle(5.7f);
+          ob.area_sphere(5.7f);
+        }
+}
+/*
+Output:-
+java Area
+Area of Circle=102.0186
+Area of Sphere=408.0744
+*/
+------------------------------------------------------------------------------------------------
+/* Define an Interface Integer with Abstract Method Check().Write a java Program to check wheather a given number is Positive or Negative..*/
+import java.util.*;
+interface Integer
+{
+	void check(int n);
+}
+class Demo implements Integer
+{
+	public void check(int n)
+	{
+	  if(n>0)
+	    System.out.println("Number is Positive");
+	  else
+	    System.out.println("Number is Negative");
+        }	
+        public static void main(String arg[])
+        {
+          Demo ob=new Demo();
+          Scanner sc=new Scanner(System.in);
+          System.out.println("Enter Number");
+          int n=sc.nextInt();
+          ob.check(n);
+        }
+}
+/*
+Output:-
+Enter Number
+11
+Number is Positive
+*/	
+---------------------------------------------------------------------------------------------------------
+/* Define an Interface Operation which has method area(),volume().Define a constant PI having a value 3.142.Create a class cylinder which implement this interface (member -radius,height).Create one object and calcuate the area and volume...*/
+interface Operation
+{
+	final float PI=3.14f;
+	void area_cylinder(float r,float h);
+	void volume_cylinder(float r,float h);
+}
+class Cylinder implements Operation
+{
+	public void area_cylinder(float r,float h)
+	{
+	  float a=2*PI*r*(r+h);
+	  System.out.println("Area of Cylinder="+a);
+        }
+        public void volume_cylinder(float r,float h)
+	{
+	  float a=3.14f*r*r*h;
+	  System.out.println("Area of Cylinder="+a);
+        }	
+        public static void main(String arg[])
+        {
+          Cylinder ob=new Cylinder();
+          ob.area_cylinder(12.4f,4.2f);
+          ob.volume_cylinder(5.6f,2.5f);
+        }
+}
+/*
+Output:-
+java Cylinder
+Area of Cylinder=1292.675
+Area of Cylinder=246.176
+*/	
+--------------------------------------------------------------------------------------------------------
+/* Write a program to find the cube of given number using function Interface..*/
+import java.util.*;
+interface I1
+{
+	void cube(int n);
+}
+class Demo implements I1
+{
+	public void cube(int n)
+	{
+	  int c=n*n*n;
+	  System.out.println("Cube="+c);
+	}
+	public static void main(String arg[])
+	{
+	  Demo ob=new Demo();
+	  Scanner sc=new Scanner(System.in);
+	  System.out.println("Enter Number:");
+	  int n=sc.nextInt();
+	  ob.cube(n);
+	}
+}
+/*
+Output:-
+java Demo
+Enter Number:
+4
+Cube=64
+*/
