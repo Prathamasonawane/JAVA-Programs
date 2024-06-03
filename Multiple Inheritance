@@ -1,0 +1,200 @@
+/* Write a program for Multilevel Inheritance such that country is inherited continent .State is inherited from country .Display the place ,State,country and continent*/
+import java.util.*;
+class Continent
+{
+	String continame;
+	Scanner sc=new Scanner(System.in);
+	void acceptconti()
+	{
+	  System.out.println("Enter Continent Name:");
+	  continame=sc.next();
+	}
+}
+class Country extends Continent
+{
+	String countryname;
+	void acceptcountry()
+	{
+	  System.out.println("Enter Country Name:");
+	  countryname=sc.next();
+	}
+}
+class State extends Country
+{
+	String statename,place;
+	void acceptstate()
+	{
+	  System.out.println("Enter State Name:");
+	  statename=sc.next();
+	  System.out.println("Enter Place:");
+	  place=sc.next();
+	}
+	void disp()
+	{
+	  System.out.println(" Continent Name="+continame);
+	  System.out.println(" Country Name="+countryname);
+	  System.out.println(" State Name="+statename);
+	  System.out.println(" Place Name="+place);
+	}
+}
+class MDemo
+{
+	public static void main(String arg[])
+	{
+	  State ob=new State();
+	  ob.acceptconti();
+	  ob.acceptcountry();
+	  ob.acceptstate();
+	  ob.disp();
+	}
+}
+/*
+Output:-
+java MDemo
+Enter Continent Name:
+Asia
+Enter Country Name:
+India
+Enter State Name:
+Maharastra
+Enter Place:
+Nashik
+ Continent Name=Asia
+ Country Name=India
+ State Name=Maharastra
+ Place Name=Nashik
+*/	  
+---------------------------------------------------------------------------------------------------------------------------------
+/* Example of Multilevle Inheritance
+GrandFather=gfname-->void acceptgf()
+Father=fname-->acceptf()
+Child=cname-->acceptc() and disp()
+*/
+import java.util.*;
+class GrandFather
+{
+	String GFname;
+	Scanner sc=new Scanner(System.in);
+	void acceptGF()
+	{
+	  System.out.println("Enter GrandFather Name:");
+	  GFname=sc.next();
+	}
+}
+class Father extends GrandFather
+{
+	String Fname;
+	void acceptF()
+	{
+	  System.out.println("Enter Father Name:");
+	  Fname=sc.next();
+	}
+}
+class Child extends Father
+{
+	String Cname;
+	void acceptC()
+	{
+	  System.out.println("Enter Child Name:");
+	  Cname=sc.next();
+	}
+	void disp()
+	{
+	  System.out.println(" GrandFater Name="+GFname);
+	  System.out.println(" Father Name="+Fname);
+	  System.out.println(" Child Name="+Cname);
+	}
+	public static void main(String arg[])
+	{
+	  Child ob=new Child();
+	  ob.acceptGF();
+	  ob.acceptF();
+	  ob.acceptC();
+	  ob.disp();
+	}
+}
+/*
+Output:-
+java Child
+Enter GrandFather Name:
+Ashok
+Enter Father Name:
+Rajendra
+Enter Child Name:
+Prathama
+ GrandFater Name=Ashok
+ Father Name=Rajendra
+ Child Name=Prathama
+*/
+---------------------------------------------------------------------------------------------------------------------------------------
+/* Example of Multilevle Inheritance
+Student=rno,sname--> acceptS()
+Exam=6 sub marks(s1,s2,s3,s4,s5,s6)-->acceptMarks()
+Result=Claculate(),total,per,disp()
+*/
+import java.util.*;
+class Student
+{
+	String Sname;
+	int rno;
+	Scanner sc=new Scanner(System.in);
+	void acceptS()
+	{
+	  System.out.println("Enter Student Name:");
+	  Sname=sc.next();
+	  System.out.println("Enter Student RollNo:");
+	  rno=sc.nextInt();
+	}
+}
+class Exam extends Student
+{
+	int s1,s2,s3,s4,s5,s6;
+	void acceptE()
+	{
+	  System.out.println("Enter Six Subject Marks:");
+	  s1=sc.nextInt();
+	  s2=sc.nextInt();
+	  s3=sc.nextInt();
+	  s4=sc.nextInt();
+	  s5=sc.nextInt();
+	  s6=sc.nextInt();
+	}
+}
+class Result extends Exam
+{
+	float per;
+	int Total;
+	void Calculate()
+	{
+	  Total=s1+s2+s3+s4+s5+s6;
+	  per=(float)Total/6;
+	}
+	void disp()
+	{
+	  System.out.println(" Student Name="+Sname);
+	  System.out.println(" Student RollNo="+rno);
+	  System.out.println(" Student Percentage="+per);
+	}
+	public static void main(String arg[])
+	{
+	  Result ob=new Result();
+	  ob.acceptS();
+	  ob.acceptE();
+	  ob.Calculate();
+	  ob.disp();
+	}
+}
+/*
+Output:-
+java Result
+Enter Student Name:
+Prathama
+Enter Student RollNo:
+3264
+Enter Six Subject Marks:
+96 85 88 90 80 98 
+ Student Name=Prathama
+ Student RollNo=3264
+ Student Percentage=89.5
+*/
+--------------------------------------------------------------------------------------------------------------------
