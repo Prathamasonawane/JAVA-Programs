@@ -1,0 +1,103 @@
+/* Example of Heirarchical Inheritance
+Collage=cno,cname,caddress-->acceptc(),disp()
+Student=rno,sname,per-->accepts() and disp()
+Teacher=Tno,Tname,sal-->Accept(),disp()
+*/
+
+import java.util.*;
+class Collage
+{
+	int cno;
+	String cname;
+	Scanner sc=new Scanner(System.in);
+	void acceptC()
+	{
+	  System.out.println("Enter Collage No:");
+	  cno=sc.nextInt();
+	  System.out.println("Enter Collage Name:");
+	  cname=sc.next();
+	 }
+	 void dispC()
+	 {
+	   System.out.println("Collage No="+cno);
+	   System.out.println("Collage Name="+cname);
+	 }
+}
+class Student extends Collage
+{
+	int rno;
+	String sname;
+	float per;
+	void accept()
+	{
+	  System.out.println("Enter Student RollNo:");
+	  rno=sc.nextInt();
+	  System.out.println("Enter Student Name:");
+	  sname=sc.next();
+	  System.out.println("Enter Student Percentage:");
+	  per=sc.nextFloat();
+	 }
+	 void disp()
+	 {
+	   System.out.println("Student RollNo="+rno);
+	   System.out.println("Student Name="+sname);
+	   System.out.println("Student Percentage="+per);
+	 }
+}
+class Teacher extends Collage
+{
+	int Tno;
+	String Tname;
+	float salary;
+	void accept()
+	{
+	  System.out.println("Enter Tracher No:");
+	  Tno=sc.nextInt();
+	  System.out.println("Enter Teacher Name:");
+	  Tname=sc.next();
+	  System.out.println("Enter Teacher Salary:");
+	  salary=sc.nextFloat();
+	 }
+	 void disp()
+	 {
+	   System.out.println("Teacher No="+Tno);
+	   System.out.println("Teacher Name="+Tname);
+	   System.out.println("Teacher Salary="+salary);
+	 }
+}
+class MDemo
+{
+	 public static void main(String arg[])
+	 {
+	   Student ob=new Student();
+	   ob.acceptC();
+	   ob.accept();
+	   ob.dispC();
+	   ob.disp();
+	   Teacher ob1=new Teacher();
+	   ob1.acceptC();
+	   ob1.accept();
+	   ob1.dispC();
+	   ob1.disp();
+	 }
+}
+/*
+Output:-
+java MDemo
+Enter Collage No:
+101
+Enter Collage Name:
+RBNB
+Enter Student RollNo:
+3264
+Enter Student Name:
+Prathama
+Enter Student Percentage:
+90.88
+Collage No=101
+Collage Name=RBNB
+Student RollNo=3264
+Student Name=Prathama
+Student Percentage=90.88
+*/
+-------------------------------------------------------------------------------------------------------------------------------------------
