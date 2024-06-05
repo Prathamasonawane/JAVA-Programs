@@ -1,0 +1,293 @@
+/* Create an abstract class A having default constructors ,abstract method add(a,b)& non-abstract 
+method  square(n)/Create a derived class B that inherit/extends abstract class A (Use method Override)*/
+abstract class A
+{
+	A()
+	{
+	   System.out.println("I am Abstract-A");
+	}
+	  abstract void add(int a,int b);
+	  void Square(int n)
+	  {
+	    int s=n*n;
+	    System.out.println("Square of Number="+s);
+	  }
+}
+class B extends A
+{
+	void add(int a,int b)
+	{
+	   int c=a+b;
+	   System.out.println("Addition="+c);
+	}
+}
+class MD
+{
+	public static void main(String arg[])
+	{
+	   B ob=new B();
+	   ob.add(40,20);
+	   ob.Square(5);
+	 }
+}
+/*
+Output:-
+I am Abstract-A
+Addition=60
+Square of Number=25
+*/
+-----------------------------------------------------------------------------------------------------------------------------
+/*Create abstract class Shape with abstract method area().Write a java Program to calculate area of Rectangle & Triangle.(Inherit Shape class in classes Rectangle & Triangle)*/
+import java.util.*;
+abstract class Shape
+{
+	Scanner sc=new Scanner(System.in);
+	abstract void Area();
+}
+class Rectangle extends Shape
+{
+	void Area()
+	{
+	   System.out.println("Enter Length & Breadth:");
+	      float l=sc.nextFloat();
+	      float b=sc.nextFloat();
+	      float a=l*b;
+	   System.out.println("Area of Reactangle="+a);
+	   
+	}
+}
+class Triangle extends Shape
+{
+	void Area()
+	{
+	   System.out.println("Enter Base & Height:");
+	      float b=sc.nextFloat();
+	      float h=sc.nextFloat();
+	      float a=0.5f*b*h;
+	   System.out.println("Area of Triangle="+a);
+	   
+	}
+}
+class MD
+{
+	public static void main(String arg[])
+	{
+	   Rectangle ob=new Rectangle();
+	   ob.Area();
+	   Triangle ob1=new Triangle();
+	   ob1.Area();
+	 }
+}
+/*
+Output:-
+Enter Length & Breadth:
+4
+5
+Area of Reactangle=20.0
+Enter Base & Height:
+6
+8
+Area of Triangle=24.0
+*/
+-------------------------------------------------------------------------------------------------------------------
+/* Create abstract class shape with method calc_area() & calc_volume().Derived two classes sphere(radius) & cone(radius,height)from it.Calculate area & volume of both (Use  method Overriding) */
+abstract class Shape
+{
+	abstract void calc_area();
+	abstract void calc_volume();
+}
+class Sphere extends Shape
+{
+	float r;
+	Sphere(float r)
+	{
+	  this.r=r;
+	}
+	void calc_area()
+	{
+	  float a=4*3.14f*r*r;
+	  System.out.println("Area of Sphere="+a);
+	}
+	void calc_volume()
+	{
+	  float v=1.99f*3.14f*r*r*r;
+	  System.out.println("Volume of Sphere="+v);
+	}
+}
+class Cone extends Shape
+{
+	float r,h;
+	Cone(float r,float h)
+	{
+	  this.r=r;
+	  this.h=h;
+	}
+	void calc_area()
+	{
+	  float a=3.14f*r*(r+h);
+	  System.out.println("Area of Cone="+a);
+	}
+	void calc_volume()
+	{
+	  float v=0.33f*3.14f*r*r*h;
+	  System.out.println("Volume of Cone="+v);
+	}
+}
+class MD
+{
+	public static void main(String arg[])
+	{
+	  Sphere ob=new Sphere(3.8f);
+	    ob.calc_area();
+	    ob.calc_volume();
+	  Cone ob1=new Cone(6.6f,7.2f);
+	    ob1.calc_area();
+	    ob1.calc_volume();
+	}
+}
+/*
+Output:-
+Area of Sphere=181.3664
+Volume of Sphere=342.87317
+Area of Cone=285.9912
+Volume of Cone=324.98547
+*/
+-----------------------------------------------------------------------------------------------------------------------------
+/*Define a abstract class Staff with member name & address .Define two sub classes FullTimeStaff(Department,Salary) & PartTimeStaff (Number of hours,rate per hours).Define appropriate 
+constructors.Create n obeject which could be of either FullTimeStaff of PartTimeStaff class by asking the user choise .Display Details of FullTimeStaff & PartTimeStaff..*/
+import java.util.*;
+abstract class Staff
+{
+	String name,addr;
+	abstract void disp();
+}
+class FullTimeStaff extends Staff
+{
+	String dept;
+	int sal;
+	FullTimeStaff(String name,String addr,String dept,int sal)
+	{
+	  this.name=name;
+	  this.addr=addr;
+	  this.dept=dept;
+	  this.sal=sal;
+	}
+	void disp()
+	{
+	  System.out.println("Staff Name="+name);
+	  System.out.println("Staff Address="+addr);
+	  System.out.println("Staff Department="+dept);
+	  System.out.println("Staff Salary="+sal);
+	}
+}
+class PartTimeStaff extends Staff
+{
+	int hours,rate;
+	PartTimeStaff(String name,String addr,int hours,int rate)
+	{
+	  this.name=name;
+	  this.addr=addr;
+	  this.hours=hours;
+	  this.rate=rate;
+	}
+	void disp()
+	{
+	  System.out.println("Staff Name="+name);
+	  System.out.println("Staff Address="+addr);
+	  System.out.println("Number of Hours="+hours);
+	  System.out.println("Rate per hours="+rate);
+	  System.out.println("Salary"+(hours*rate));
+	}
+}
+class MD
+{
+	public static void main(String arg[])
+	{
+	   Scanner sc=new Scanner(System.in);
+	   System.out.println("Enter Limit=");
+	     int n=sc.nextInt();
+	   FullTimeStaff ob[]=new FullTimeStaff[n];
+           PartTimeStaff ob1[]=new PartTimeStaff[n];
+           int ch;
+           do
+           {
+             System.out.println("Enter choice: \n1-FullTimeStaff: \n2-PartTimeStaff:");
+             ch=sc.nextInt();
+             switch(ch)
+             {
+               case 1:for(int i=0;i<n;i++)
+               		{
+               		  System.out.println("Enter Name:");
+               		    String name=sc.next();
+               		  System.out.println("Enter Address:");
+               		    String addr=sc.next();
+               		  System.out.println("Enter Department:");
+               		    String dept=sc.next();
+               		  System.out.println("Enter Salary:");
+               		     int sal=sc.nextInt();
+               	      ob[i]=new FullTimeStaff(name,addr,dept,sal);
+               	         }
+               	      for(int i=0;i<n;i++)
+               	      {
+               	        ob[i].disp();
+               	      }
+               	      break;
+		case 2:for(int i=0;i<n;i++)
+               		{
+               		  System.out.println("Enter Name:");
+               		    String name=sc.next();
+               		  System.out.println("Enter Address:");
+               		    String addr=sc.next();
+               		  System.out.println("Enter Number of hours:");
+               		    int hours=sc.nextInt();
+               		  System.out.println("Enter Rate per Hours:");
+               		    int rate=sc.nextInt();
+               	      ob1[i]=new PartTimeStaff(name,addr,hours,rate);
+               	         }
+               	      for(int i=0;i<n;i++)
+               	      {
+               	        ob1[i].disp();
+               	      }
+               	      break;
+               	      }//switch()
+               	      }while(ch<3);
+               }
+}
+/*
+Output:-
+Enter Limit=
+2
+Enter choice: 
+1-FullTimeStaff: 
+2-PartTimeStaff:
+1
+Enter Name:
+Om
+Enter Address:
+Nagar
+Enter Department:
+Computer
+Enter Salary:
+65000
+Enter Name:
+Sai
+Enter Address:
+Pune
+Enter Department:
+Science
+Enter Salary:
+50000
+Staff Name=Om
+Staff Address=Nagar
+Staff Department=Computer
+Staff Salary=65000
+Staff Name=Sai
+Staff Address=Pune
+Staff Department=Science
+Staff Salary=50000
+Enter choice: 
+1-FullTimeStaff: 
+2-PartTimeStaff:
+3
+*/
+------------------------------------------------------------------------------------------------------------------------------
