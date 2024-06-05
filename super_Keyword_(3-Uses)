@@ -1,0 +1,94 @@
+/* Accessing Base Class Member(Variable) */
+class A 
+{
+	int x=55;	//base class member..
+}
+class B extends A
+{
+	int x=44;	//Global
+	void disp()
+	{
+	  int x=33;	//Local
+	  System.out.println("Value 1="+x);
+	  System.out.println("Value 2="+this.x);
+	  System.out.println("Value 3="+super.x);
+	}
+}
+class MD
+{
+	public static void main(String arg[])
+	{
+	  B ob=new B();
+	  ob.disp();
+	}
+}
+/*
+Output:-
+Value 1=33
+Value 2=44
+Value 3=55
+*/
+--------------------------------------------------------------------------------------------------
+/*Calling Base class Method*/
+class A 
+{
+	void add(int a,int b)
+	{
+		int c=a+b;
+		System.out.println("Addition 1="+c);
+	}
+}
+class B extends A
+{
+	void add(int a,int b)
+	{
+		super.add(a,b);
+		int c=a+b;
+		System.out.println("Addition 2="+c);
+	}
+}
+class MD
+{
+	public static void main(String arg[])
+	{
+	  B ob=new B();
+	  ob.add(22,33);
+	}
+}
+/*
+Output:-
+Addition 1=55
+Addition 2=55
+*/
+------------------------------------------------------------------------------------------------
+/* Calling Base Class Parametrized Constructor*/
+class A 
+{
+	A(int x,int y)
+	{
+		int z=x+y;
+		System.out.println("Addition in A="+z);
+	}
+}
+class B extends A
+{
+	 B(int x,int y)
+	{
+		super(x,y);
+		int z=x+y;
+		System.out.println("Addition in B="+z);
+	}
+}
+class MD
+{
+	public static void main(String arg[])
+	{
+	  B ob=new B(33,11);
+	}
+}
+/*
+Output:-
+Addition in A=44
+Addition in B=44
+*/
+-------------------------------------------------------------------------------------------------
