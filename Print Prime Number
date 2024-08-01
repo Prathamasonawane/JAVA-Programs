@@ -1,0 +1,29 @@
+class PrimeDemo
+{
+  public static void main(String arg[])
+   {
+    System.out.print("Prime Number=");
+    for(int i=0;i<arg.length;i++)
+     {
+	int n=Integer.parseInt(arg[i]);
+	int s=0;
+	for(int j=2;j<n;j++)
+	{
+	  if(n%j==0)
+	   {
+		s=s+1;
+	   }
+        }
+if(s==0)
+System.out.println(n+" ");   
+     }
+  }
+}
+============================================================
+
+D:\java>java PrimeDemo 12 23 43 89 98 71 67
+Prime Number=23
+43
+89
+71
+67
