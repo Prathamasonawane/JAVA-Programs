@@ -1,0 +1,28 @@
+/* Accept eno,ename,sal and display Using Default Constructor */
+
+class Emp
+{
+  int eno;
+  String ename;
+  float sal;
+  Emp()
+  {
+    eno=101;
+    ename="Ram";
+    sal=50000;
+   System.out.println("Emp No="+eno);
+   System.out.println("Emp Name="+ename);
+   System.out.println("Emp Salary="+sal);
+  }
+  public static void main(String arg[])
+  {
+  Emp ob=new Emp();
+  }
+}
+/*
+bcs@PRATHAMA:~$ javac default_constr1.java
+bcs@PRATHAMA:~$ java Emp
+Emp No=101
+Emp Name=Ram
+Emp Salary=50000.0
+*/
