@@ -1,0 +1,19 @@
+/* Addtion of two number using Parameterize Constructer*/
+
+class Add
+{
+  Add(int a,int b)
+  {
+    int c=a+b;
+    System.out.println("Addition="+c);
+  }
+  public static void main(String arg[])
+  {
+    Add ob=new Add(11,55);
+  }
+}
+/*
+bcs@PRATHAMA:~$ javac para_constr1.java
+bcs@PRATHAMA:~$ java Add
+Addition=66
+/
