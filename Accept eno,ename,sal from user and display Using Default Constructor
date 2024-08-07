@@ -1,0 +1,38 @@
+/* Accept eno,ename,sal from user and display Using Default Constructor */
+import java.util.*;
+class Emp
+{
+  int eno;
+  String ename;
+  float sal;
+  Emp()
+  {
+    Scanner sc=new Scanner(System.in);
+     System.out.println("Enter Emp Number:");
+       eno=sc.nextInt();
+     System.out.println("Enter Emp Name:");
+       ename=sc.next();
+     System.out.println("Enter Emp Salary:");
+       sal=sc.nextFloat();
+   System.out.println("Emp No="+eno);
+   System.out.println("Emp Name="+ename);
+   System.out.println("Emp Salary="+sal);
+  }
+  public static void main(String arg[])
+  {
+  Emp ob=new Emp();
+  }
+}
+/*
+bcs@PRATHAMA:~$ javac default_constr2.java
+bcs@PRATHAMA:~$ java Emp
+Enter Emp Number:
+111
+Enter Emp Name:
+Ram
+Enter Emp Salary:
+50000
+Emp No=111
+Emp Name=Ram
+Emp Salary=50000.0
+*/
