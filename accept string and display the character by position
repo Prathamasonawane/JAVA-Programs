@@ -1,0 +1,15 @@
+/* accept string and display the character by position*/
+class Demo
+{
+  public static void main(String arg[])
+  {
+    String s1="Mauli";
+    System.out.println(s1.charAt(4));
+  }
+}
+/*
+Output:-
+bcs@PRATHAMA:~$ javac p6.java
+bcs@PRATHAMA:~$ java Demo
+i
+*/
