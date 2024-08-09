@@ -1,0 +1,29 @@
+/*Accept Number from user & display number is even or odd */
+import java.util.*;
+class EvenOdd
+{
+  public static void main(String arg[])
+   {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter Number:");
+	  int n=sc.nextInt();    
+     if(n%2==0)
+       System.out.printf("Number is Even = %d",n);
+     else
+       System.out.printf("Number is Odd = %d",n);
+   }
+}    
+
+/*
+Output:-
+bcs@PRATHAMA:~$ javac evenodd1.java
+bcs@PRATHAMA:~$ java EvenOdd
+Enter Number:
+10
+----------------------------------------------------------
+Number is Even = 10bcs@PRATHAMA:~$ javac evenodd1.java
+bcs@PRATHAMA:~$ java EvenOdd
+Enter Number:
+2
+Number is Even = 2
+*/
