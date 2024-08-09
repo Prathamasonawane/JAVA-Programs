@@ -17,3 +17,23 @@ bcs@PRATHAMA:~$ javac evenodd.java
 bcs@PRATHAMA:~$ java EvenOdd
 Number is Odd
 */
+====================================================================
+/*Accept Number & display number is even or odd */
+class EvenOdd
+{
+  public static void main(String arg[])
+   {
+     int n=5;
+     if(n%2==0)
+       System.out.printf("Number is Even = %d",n);
+     else
+       System.out.printf("Number is Odd = %d",n);
+   }
+}    
+
+/*
+Output:-
+bcs@PRATHAMA:~$ javac evenodd.java
+bcs@PRATHAMA:~$ java EvenOdd
+Number is Odd = 5
+*/
