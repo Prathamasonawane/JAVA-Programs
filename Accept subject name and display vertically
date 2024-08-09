@@ -1,0 +1,23 @@
+/* Accept subject name and display vertically */
+import java.util.*;
+class Demo
+{
+  public static void main(String arg[])
+   {
+     String s1="java,php,python,tcs,ds,os";
+     String s2[]=s1.split(",");
+       for(int i=0;i<s2.length;i++)
+        System.out.println(s2[i]);
+   }
+}
+/*
+Output:-
+bcs@PRATHAMA:~$ javac slipt.java
+bcs@PRATHAMA:~$ java Demo
+java
+php
+python
+tcs
+ds
+os
+*/
