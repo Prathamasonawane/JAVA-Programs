@@ -1,0 +1,22 @@
+/* Accept name from user display..*/
+import java.util.*;
+class Demo
+{
+  public static void main(String arg[])
+   {
+     Scanner sc=new Scanner(System.in);
+       System.out.println("Enter Name:");
+        String s1=sc.nextLine();
+        
+       System.out.println("Name="+s1);
+   }
+}
+
+/*
+Output:-
+bcs@PRATHAMA:~$ javac a3.java
+bcs@PRATHAMA:~$ java Demo
+Enter Name:
+Prathama Sonawane
+Name=Prathama Sonawane
+*/
