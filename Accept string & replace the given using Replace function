@@ -1,0 +1,27 @@
+/* Accept string & replace the given using Replace function*/
+//s2=s1.replaceAll(find string,replace string);
+//s2=s1.replaceFirst(find string,replace string);
+
+import java.util.*;
+class Demo
+{
+  public static void main(String arg[])
+   {
+     String s1="India Is My Country.I Love My India";
+     
+        String s2=s1.replaceAll("India","Bharat");
+          System.out.println("String="+s2);
+
+        String s3=s1.replaceAll("India","Bharat");
+          System.out.println("String="+s3);
+   }
+} 
+
+/*
+Output:-
+bcs@PRATHAMA:~$ javac p8.java
+bcs@PRATHAMA:~$ java Demo
+String=Bharat Is My Country.I Love My Bharat
+String=Bharat Is My Country.I Love My Bharat
+
+*/     
