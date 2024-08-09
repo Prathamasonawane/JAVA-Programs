@@ -1,0 +1,24 @@
+/* Accept string and display substring */
+/* substring(startindex,endindex);
+   substring(startindex);
+*/
+import java.util.*;
+class Demo
+{
+  public static void main(String arg[])
+  {
+    String s1="Shrirampur";
+    String s2=s1.substring(4,7);
+    String s3=s1.substring(4);
+   
+      System.out.println("String="+s2);
+      System.out.println("String="+s3);
+  }
+}
+/*
+Output:-
+bcs@PRATHAMA:~$ javac p7.java
+bcs@PRATHAMA:~$ java Demo
+String=ram
+String=rampur
+*/
