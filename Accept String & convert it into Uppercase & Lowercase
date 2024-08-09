@@ -1,0 +1,17 @@
+/* Accept String & convert it into Uppercase & Lowercase */
+class Demo
+{
+  public static void main(String arg[])
+   {
+     String s1="Cdj rbnb";
+      System.out.println("String in Uppercase="+s1.toUpperCase());
+      System.out.println("String in Lowercase="+s1.toLowerCase());
+   }
+}
+/*
+Output:-
+bcs@PRATHAMA:~$ javac case.java
+bcs@PRATHAMA:~$ java Demo
+String in Uppercase=CDJ RBNB
+String in Lowercase=cdj rbnb
+*/
