@@ -1,5 +1,5 @@
 /* Create a class Emp(eno,ename,sal).
-Accept two emp info and dasplay...*/
+Accept 5  emp info and dasplay...*/
 
 
 import java.util.*;
