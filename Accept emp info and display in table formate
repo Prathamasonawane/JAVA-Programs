@@ -1,0 +1,45 @@
+/* Create a class Emp(eno,ename,sal).
+Accept emp info and display in table formate...*/
+
+import java.util.*;
+class Emp
+{
+  int eno;
+  String ename;
+  double sal;
+  void accept()
+  {
+    Scanner sc=new Scanner(System.in);
+     System.out.println("Enter Emp Number:");
+       eno=sc.nextInt();
+     System.out.println("Enter Emp Name:");
+       ename=sc.next();
+     System.out.println("Enter Emp Salary:");
+       sal=sc.nextDouble();
+  }
+  void disp()
+  {
+   System.out.printf("\n%d\t%s\t%f",eno,ename,sal);
+  }
+  public static void main(String arg[])
+  {
+    Emp ob;//create object
+      ob=new Emp();//memory allocate
+      ob.accept();
+      ob.disp();
+  }
+}
+
+/*
+Output:-
+bcs@PRATHAMA:~$ javac emp4.java
+bcs@PRATHAMA:~$ java Emp
+Enter Emp Number:
+101
+Enter Emp Name:
+Ram
+Enter Emp Salary:
+50000
+
+101	Ram	50000.000000
+*/
