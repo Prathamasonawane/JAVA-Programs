@@ -1,0 +1,69 @@
+/* Create a class Emp(eno,ename,sal).
+Accept N emp info and display in table formate...*/
+
+
+import java.util.*;
+class Emp
+{
+  int eno;
+  String ename;
+  double sal;
+  void accept()
+  {
+    Scanner sc=new Scanner(System.in);
+     System.out.println("Enter Emp Number:");
+       eno=sc.nextInt();
+     System.out.println("Enter Emp Name:");
+       ename=sc.next();
+     System.out.println("Enter Emp Salary:");
+       sal=sc.nextDouble();
+  }
+  void disp()
+  {
+   System.out.printf("\n%d\t%s\t%f",eno,ename,sal);
+  }
+  public static void main(String arg[])
+  {
+    Scanner sc=new Scanner(System.in);
+    System.out.println("Enter Limit:-");
+     int n=sc.nextInt();
+    Emp ob[]=new Emp[n]; //create array of object
+      for(int i=0;i<n;i++)
+       {
+         ob[i]=new Emp();
+         ob[i].accept();
+       }
+       for(int i=0;i<n;i++)
+       {
+         ob[i].disp();
+       }
+   }
+}
+/*
+Output:-
+bcs@PRATHAMA:~$ javac emp5.java
+bcs@PRATHAMA:~$ java Emp
+Enter Limit:-
+3
+Enter Emp Number:
+101
+Enter Emp Name:
+Ram
+Enter Emp Salary:
+50000
+Enter Emp Number:
+102
+Enter Emp Name:
+Sham
+Enter Emp Salary:
+45000
+Enter Emp Number:
+3
+Enter Emp Name:
+Om
+Enter Emp Salary:
+50000
+
+101	Ram	50000.000000
+102	Sham	45000.000000
+*/
