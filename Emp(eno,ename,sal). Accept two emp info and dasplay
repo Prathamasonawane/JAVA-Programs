@@ -28,8 +28,8 @@ class Emp
   Emp ob=new Emp();
   Emp ob1=new Emp();
   ob.accept();
-  ob.disp();
   ob1.accept();
+  ob.disp();
   ob1.disp();
   }
 }
@@ -39,21 +39,22 @@ Output:-
 bcs@PRATHAMA:~$ javac emp1.java
 bcs@PRATHAMA:~$ java Emp
 Enter Emp Number:
-1
+101
+Enter Emp Name:
+RAkesh
+Enter Emp Salary:
+50000
+Enter Emp Number:
+102
 Enter Emp Name:
 Ram
 Enter Emp Salary:
-50000
-Emp No=1
-Emp Name=Ram
+45000
+Emp No=101
+Emp Name=RAkesh
 Emp Salary=50000.0
-Enter Emp Number:
-2
-Enter Emp Name:
-Om
-Enter Emp Salary:
-600000
-Emp No=2
-Emp Name=Om
-Emp Salary=600000.0
+Emp No=102
+Emp Name=Ram
+Emp Salary=45000.0
+
 */
