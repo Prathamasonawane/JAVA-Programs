@@ -1,0 +1,59 @@
+/* Create a class Emp(eno,ename,sal).
+Accept two emp info and dasplay...*/
+
+import java.util.*;
+class Emp
+{
+  int eno;
+  String ename;
+  double sal;
+  void accept()
+  {
+    Scanner sc=new Scanner(System.in);
+     System.out.println("Enter Emp Number:");
+       eno=sc.nextInt();
+     System.out.println("Enter Emp Name:");
+       ename=sc.next();
+     System.out.println("Enter Emp Salary:");
+       sal=sc.nextDouble();
+  }
+  void disp()
+  {
+   System.out.println("Emp No="+eno);
+   System.out.println("Emp Name="+ename);
+   System.out.println("Emp Salary="+sal);
+  }
+  public static void main(String arg[])
+  {
+  Emp ob=new Emp();
+  Emp ob1=new Emp();
+  ob.accept();
+  ob.disp();
+  ob1.accept();
+  ob1.disp();
+  }
+}
+
+/*
+Output:-
+bcs@PRATHAMA:~$ javac emp1.java
+bcs@PRATHAMA:~$ java Emp
+Enter Emp Number:
+1
+Enter Emp Name:
+Ram
+Enter Emp Salary:
+50000
+Emp No=1
+Emp Name=Ram
+Emp Salary=50000.0
+Enter Emp Number:
+2
+Enter Emp Name:
+Om
+Enter Emp Salary:
+600000
+Emp No=2
+Emp Name=Om
+Emp Salary=600000.0
+*/
