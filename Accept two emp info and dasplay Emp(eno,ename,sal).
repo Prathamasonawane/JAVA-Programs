@@ -1,0 +1,91 @@
+/* Create a class Emp(eno,ename,sal).
+Accept two emp info and dasplay...*/
+
+
+import java.util.*;
+class Emp
+{
+  int eno;
+  String ename;
+  double sal;
+  void accept()
+  {
+    Scanner sc=new Scanner(System.in);
+     System.out.println("Enter Emp Number:");
+       eno=sc.nextInt();
+     System.out.println("Enter Emp Name:");
+       ename=sc.next();
+     System.out.println("Enter Emp Salary:");
+       sal=sc.nextDouble();
+  }
+  void disp()
+  {
+   System.out.println("Emp No="+eno);
+   System.out.println("Emp Name="+ename);
+   System.out.println("Emp Salary="+sal);
+  }
+  public static void main(String arg[])
+  {
+    Emp ob[]=new Emp[5]; //create array of object
+      for(int i=0;i<5;i++)
+       {
+         ob[i]=new Emp();
+         ob[i].accept();
+       }
+       for(int i=0;i<5;i++)
+       {
+         ob[i].disp();
+       }
+   }
+}
+
+/*
+Output:-
+bcs@PRATHAMA:~$ javac emp2.java
+bcs@PRATHAMA:~$ java Emp
+Enter Emp Number:
+1
+Enter Emp Name:
+Ram
+Enter Emp Salary:
+25000
+Enter Emp Number:
+2
+Enter Emp Name:
+Sham
+Enter Emp Salary:
+30000
+Enter Emp Number:
+3
+Enter Emp Name:
+Sai
+Enter Emp Salary:
+35000
+Enter Emp Number:
+4
+Enter Emp Name:
+Om
+Enter Emp Salary:
+40000
+Enter Emp Number:
+5
+Enter Emp Name:
+Aman
+Enter Emp Salary:
+50000
+Emp No=1
+Emp Name=Ram
+Emp Salary=25000.0
+Emp No=2
+Emp Name=Sham
+Emp Salary=30000.0
+Emp No=3
+Emp Name=Sai
+Emp Salary=35000.0
+Emp No=4
+Emp Name=Om
+Emp Salary=40000.0
+Emp No=5
+Emp Name=Aman
+Emp Salary=50000.0
+*/     
