@@ -1,0 +1,29 @@
+/*Slip8_1-sem_5: Create a class Sphere, to calculate the volume and surface area of sphere. (Hint : Surface
+area=4*3.14(r*r), Volume=(4/3)3.14(r*r*r)) */
+
+import java.util.*;
+class sphere
+{
+ public static void main(String[] args)
+ {
+ Scanner sc=new Scanner(System.in);
+ System.out.println("Enter the radius of the sphere: ");
+ float r=sc.nextFloat();
+ float surface_area = (4*3.14f*(r*r));
+ float vol = ((float)4/3)*3.14f*(r*r*r);
+ System.out.println("The surface area of the sphere = "+surface_area);
+ System.out.println("The volume of sphere = "+vol);
+ }
+}
+
+/*
+
+Output :-
+bcs@PRATHAMA:~$ javac slip8_1.java
+bcs@PRATHAMA:~$ java sphere
+Enter the radius of the sphere: 
+4.7
+The surface area of the sphere = 277.45038
+The volume of sphere = 434.67227
+ 
+ */
