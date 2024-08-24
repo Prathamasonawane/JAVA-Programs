@@ -1,0 +1,54 @@
+/*Slip7_2: Write a program to accept a text file from user and display the contents of a file in
+reverse order and change its case.
+*/
+/*ab.txt
+Arti Markali...
+Newasa Bk
+ShrRAMpur College
+*/
+
+import java.io.*;
+import java.util.*;
+class Reverse
+{
+ public static void main(String args[])throws Exception
+ {
+ Scanner sc = new Scanner(System.in);
+ System.out.println("enter file name:");
+ String fnm = sc.next();
+ File f1 = new File(fnm);
+ if(f1.isFile())
+ {
+ BufferedInputStream br = new BufferedInputStream(new FileInputStream(fnm));
+ int n =br.available();
+ for(int i = n-1;i>=0;i--)
+ {
+ br.mark(i);
+ br.skip(i);
+ 
+ char ch=((char)br.read());
+ if(Character.isLowerCase(ch))
+ ch=Character.toUpperCase(ch);
+ else if(Character.isUpperCase(ch))
+ ch = Character.toLowerCase(ch);
+ System.out.print(ch);
+ br.reset();
+ }
+ br.close();
+ }
+ else
+ System.out.println("file not found");
+ }
+}
+
+/*
+Output:-
+bcs@PRATHAMA:~$ javac gg.java
+bcs@PRATHAMA:~$ java Reverse
+enter file name:
+ab.txt
+
+EGELLOc RUPmarRHs
+Kb ASAWEn
+...ILAKRAm ITRa
+*/
