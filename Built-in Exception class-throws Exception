@@ -1,0 +1,25 @@
+/*Built-in Exception class....
+throws Exception
+ */
+ import java.io.*;
+class Demo
+{
+ public static void main(String arg[])throws Exception
+    {
+     DataInputStream din=new DataInputStream(System.in);
+     	System.out.println("Enter Name:");
+     	String s1=din.readLine();
+     System.out.println("Name="+s1);
+    }
+}
+
+/*
+Output:-
+bcs@PRATHAMA:~$ javac throws_Exception.java
+Note: throws_Exception.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+bcs@PRATHAMA:~$ java Demo
+Enter Name:
+Prathama
+Name=Prathama
+*/
