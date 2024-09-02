@@ -1,0 +1,33 @@
+/*Built-in Exception class....
+ ArrayIndexOutOfBound Exception with try and catch
+ */
+ 
+class Demo
+{
+ public static void main(String arg[])
+   {
+      try
+      {
+     	int a[]=new int[5];
+     	System.out.println("Array Created Successfully...");     	
+     	a[0]=10;
+     	a[1]=20;
+     	a[3]=30;
+     	System.out.println("Value Insert Successfully...");
+     	System.out.println("Value Display="+a[7]);
+      }
+      catch(Exception e)
+      {
+        System.out.println("Error="+e);
+      }
+     
+   }
+}
+/*
+Output:-
+bcs@PRATHAMA:~$ javac ArrIndexOutBound_Exception1.java
+bcs@PRATHAMA:~$ java Demo
+Array Created Successfully...
+Value Insert Successfully...
+Error=java.lang.ArrayIndexOutOfBoundsException: Index 7 out of bounds for length 5
+*/
