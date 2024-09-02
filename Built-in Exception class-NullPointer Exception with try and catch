@@ -1,0 +1,26 @@
+/*Built-in Exception class....
+ NullPointer Exception with try and catch
+ */
+ import java.io.*;
+class Demo
+{
+ public static void main(String arg[])
+   {
+    try
+    {
+     String s=null;
+     System.out.println(s.length());
+    }
+    catch(Exception e)
+    {
+     System.out.println("Error="+e);
+    }
+   }
+}
+
+/*
+Output:-
+bcs@PRATHAMA:~$ javac NullPointer_Exception.java
+bcs@PRATHAMA:~$ java Demo
+Error=java.lang.NullPointerException: Cannot invoke "String.length()" because "<local1>" is null
+*/
