@@ -1,0 +1,26 @@
+/*Built-in Exception class....
+ NegativeArraySize Exception with try and catch
+*/
+
+class Demo
+{
+ public static void main(String arg[])
+   {
+     try
+       {
+         int a[]=new int [-5];
+         System.out.println("Array Declare");
+       }
+     catch(Exception e)
+       {
+         System.out.println("Error="+e);
+       }
+   }
+}
+
+/*
+Output:-
+bcs@PRATHAMA:~$ javac NegativeArray_Exception1.java
+bcs@PRATHAMA:~$ java Demo
+Error=java.lang.NegativeArraySizeException: -5
+*/
