@@ -1,0 +1,21 @@
+/*Built-in Exception class....
+ StringIndexOutOfBound Exception without try and catch
+ */
+ import java.io.*;
+class Demo
+{
+ public static void main(String arg[])
+   {
+     String s="Prathama";
+     System.out.println("String="+s);
+     System.out.println("Character="+s.charAt(9));
+   }
+}
+
+/*
+Output:-
+cs@PRATHAMA:~$ javac StringIndexOutBound_Exception.java
+bcs@PRATHAMA:~$ java Demo
+String=Prathama
+Exception in thread "main" java.lang.StringIndexOutOfBoundsException: Index 9 out of bounds for length 8
+*/
