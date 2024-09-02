@@ -1,0 +1,21 @@
+/*Built-in Exception class....
+ ArrayIndexOutOfBound Exception without try and catch
+ */
+ 
+class Demo
+{
+ public static void main(String arg[])
+   {
+     int a[]=new int[5];
+     a[13]=55;
+     System.out.println("Array Declare");
+   }
+}
+
+/*
+Output:-
+bcs@PRATHAMA:~$ javac ArrIndexOutBound_Exception.java
+bcs@PRATHAMA:~$ java Demo
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 13 out of bounds for length 5
+	at Demo.main(ArrIndexOutBound_Exception.java:10)
+*/
