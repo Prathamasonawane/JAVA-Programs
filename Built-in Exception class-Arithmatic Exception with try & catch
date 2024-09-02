@@ -1,0 +1,28 @@
+/*Built-in Exception class....
+  Arithmatic Exception
+*/
+
+class Demo
+{
+ public static void main(String arg[])
+   {
+     try
+       {
+         int a=10;
+         int b=a/0;
+         System.out.println("Division="+b);
+       }
+     catch(Exception e)
+       {
+         System.out.println("Error="+e);
+       }
+   }
+}
+
+/*
+Output:-
+bcs@PRATHAMA:~$ javac Arithmatic_Exception.java
+bcs@PRATHAMA:~$ java Demo
+Error=java.lang.ArithmeticException: / by zero
+bcs@PRATHAMA:~$ 
+*/
