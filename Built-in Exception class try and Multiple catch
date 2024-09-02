@@ -1,0 +1,38 @@
+/*Built-in Exception class try and Multiple catch
+ */
+ 
+ class Demo
+ {
+   public static void main(String arg[])
+    {
+      try
+       {
+         int a[]=new int [5];
+         a[7]=44;
+         System.out.println("Array Create");
+       }
+       catch(Exception e1)
+       {
+         System.out.println("Error 1="+e1);
+       }
+       catch(Exception e2)
+       {
+         System.out.println("Error 2="+e2);
+       }
+       catch(Exception e3)
+       {
+         System.out.println("Error 3="+e3);
+       }
+    }
+}
+/*
+Output:-
+bcs@PRATHAMA:~$ javac multiple_catch.java
+multiple_catch.java:19: error: exception Exception has already been caught
+       catch(Exception e2)
+       ^
+multiple_catch.java:23: error: exception Exception has already been caught
+       catch(Exception e3)
+       ^
+2 errors
+*/
