@@ -1,0 +1,32 @@
+/*Built-in Exception class....
+ Arithmatic Exception with try and catch
+ */
+import java.io.*;
+class Demo
+{
+  public static void main(String arg[])
+   {
+      try
+      {
+        int a=10;
+        int c=a+5;
+        int d=a-3;
+        int e=a/0;
+        int f=a*4;
+         System.out.println("Addition="+c);
+         System.out.println("Substraction="+d);
+         System.out.println("Division="+e);
+         System.out.println("Multiplication="+f);
+      }
+      catch(Exception e)
+       {
+         System.out.println("Error="+e);
+       }
+   }
+}
+/*
+Output:-
+bcs@PRATHAMA:~$ javac Arithmatic_Exception2.java
+bcs@PRATHAMA:~$ java Demo
+Error=java.lang.ArithmeticException: / by zero
+*/
