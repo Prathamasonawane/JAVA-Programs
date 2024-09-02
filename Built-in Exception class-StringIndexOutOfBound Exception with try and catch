@@ -1,0 +1,28 @@
+/*Built-in Exception class....
+ StringIndexOutOfBound Exception with try and catch
+ */
+ import java.io.*;
+class Demo
+{
+ public static void main(String arg[])
+   {
+    try
+    {
+     String s="Prathama";
+     System.out.println("String="+s);
+     System.out.println("Character="+s.charAt(9));
+    }
+    catch(Exception e)
+    {
+     System.out.println("Error="+e);
+    }
+   }
+}
+
+/*
+Output:-
+bcs@PRATHAMA:~$ javac StringIndexOutBound_Exception.java
+bcs@PRATHAMA:~$ java Demo
+String=Prathama
+Error=java.lang.StringIndexOutOfBoundsException: Index 9 out of bounds for length 8
+*/
